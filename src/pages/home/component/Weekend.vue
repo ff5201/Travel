@@ -8,7 +8,7 @@
         :key="item.id"
       >
         <div class="item-img-wrapper">
-          <img class="item-img" :src="item.url" />
+          <img class="item-img" :src="item.imgUrl" />
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -22,35 +22,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      list: [{
-        id: '1',
-        url: 'http://img1.qunarzz.com/sight/source/1811/2f/d68f3d5122d362.jpg_r_640x214_31543b2d.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '2',
-        url: 'http://img1.qunarzz.com/sight/source/1811/2f/d68f3d5122d362.jpg_r_640x214_31543b2d.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '3',
-        url: 'http://img1.qunarzz.com/sight/source/1811/2f/d68f3d5122d362.jpg_r_640x214_31543b2d.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '4',
-        url: 'http://img1.qunarzz.com/sight/source/1811/2f/d68f3d5122d362.jpg_r_640x214_31543b2d.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '5',
-        url: 'http://img1.qunarzz.com/sight/source/1811/2f/d68f3d5122d362.jpg_r_640x214_31543b2d.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

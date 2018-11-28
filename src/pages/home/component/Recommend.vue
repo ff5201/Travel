@@ -2,8 +2,8 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
-        <img class="item-img" :src="item.url"/>
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
@@ -17,35 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '1',
-        url: 'http://img1.qunarzz.com/sight/p0/1707/39/39505b9c3ecbe6f4a3.water.jpg_200x200_88eb5cbf.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '2',
-        url: 'http://img1.qunarzz.com/sight/p0/1707/39/39505b9c3ecbe6f4a3.water.jpg_200x200_88eb5cbf.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '3',
-        url: 'http://img1.qunarzz.com/sight/p0/1707/39/39505b9c3ecbe6f4a3.water.jpg_200x200_88eb5cbf.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '4',
-        url: 'http://img1.qunarzz.com/sight/p0/1707/39/39505b9c3ecbe6f4a3.water.jpg_200x200_88eb5cbf.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }, {
-        id: '5',
-        url: 'http://img1.qunarzz.com/sight/p0/1707/39/39505b9c3ecbe6f4a3.water.jpg_200x200_88eb5cbf.jpg',
-        title: '北海环岛游观光',
-        desc: '这里很火，很多人点评它！'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
