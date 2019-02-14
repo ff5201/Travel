@@ -43,7 +43,11 @@ export default {
     }
   },
   activated () {
+    // 全局绑定，其他页面滚动也会执行
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
